@@ -1,0 +1,101 @@
+.how {
+    padding: 90px 20px 100px;
+    background: #0B356B url(../img/how-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media(max-width: $md3 + px) {
+        padding: 50px 20px;
+    }
+
+    @media(max-width: $md5 + px) {
+        padding: 40px 0px;
+    }
+}
+
+.how-container {
+    max-width: 1322px;
+    padding: 80px 90px 90px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 45px rgba(37, 37, 37, 0.03);
+    border-radius: 10px;
+    position: relative;
+
+    @media(max-width: $md2 + px) {
+        padding: 50px 20px;
+    }
+
+    @media(max-width: $md4 + px) {
+        padding: 30px 20px;
+    }
+}
+
+.how__items {
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: $md4 + px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.how__item {
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid $colorOrange;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 45px rgba(37, 37, 37, 0.03);
+    border-radius: 10px;
+    padding: 35px 35px 50px;
+
+    @media(max-width: $md2 + px) {
+        padding: 20px
+    }
+
+
+}
+
+.how__item+.how__item {
+    margin-left: 10px;
+
+    @media(max-width: $md4 + px) {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    @media(max-width: $md5 + px) {
+        margin-top: 12px;
+    }
+}
+
+.how__item-img {
+    margin-bottom: 25px;
+}
+
+.how__item-title {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 500;
+
+    @media(max-width: $md3 + px) {
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.how__item-text {
+    max-width: 300px;
+    width: 100%;
+    line-height: 20px;
+    text-align: center;
+
+    @media(max-width: $md3 + px) {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}

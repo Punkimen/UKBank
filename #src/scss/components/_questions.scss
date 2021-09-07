@@ -1,0 +1,123 @@
+.questions {
+    padding: 90px 0;
+
+    @media(max-width: $md3 + px) {
+        padding: 50px 0;
+    }
+}
+
+.questions__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questions__accordion {
+    width: 100%;
+}
+
+.accordion__item {
+    font-weight: 400;
+    background-color: #fff;
+    color: #333;
+}
+
+.accordion__item.active .accordion__title {
+    background: $colorOrange;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    border: 2px solid $colorOrange;
+    border-radius: 5px 5px 0px 0px;
+    outline: none;
+
+    @media(max-width: $md3 + px) {
+        font-size: 14px;
+    }
+}
+
+.accordion__item.active .accordion__content {
+    display: block;
+}
+
+.accordion__item+.accordion__item {
+    margin-top: 5px;
+}
+
+.accordion__title a {
+    color: #333;
+    font-size: 18px;
+    line-height: 20px;
+    display: block;
+    padding: 20px 50px 20px 25px;
+    position: relative;
+    border: 1px solid $colorOrange;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: all .3s;
+
+    @media(max-width: $md3 + px) {
+        padding: 17px 20px;
+        padding-right: 35px;
+        font-size: 14px;
+    }
+}
+
+.accordion__title a:hover {
+    background: $colorOrange;
+    color: #FFF;
+    outline: none;
+}
+
+
+.accordion__title a:hover svg path {
+    fill: #fff;
+    stroke: #fff;
+}
+
+.accordion__title.active a {
+    background: $colorOrange;
+    border: 2px solid $colorOrange;
+    border-radius: 5px 5px 0px 0px;
+    outline: none;
+    color: #fff;
+}
+
+.accordion__title a svg {
+    position: absolute;
+    right: 25px;
+    transition: all .3s;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media(max-width: $md3 + px) {
+        right: 15px;
+    }
+}
+
+.accordion__title.active a svg {
+    transform: rotate(180deg);
+}
+
+.accordion__title.active a svg path {
+    fill: #fff;
+    stroke: #fff;
+}
+
+.accordion__content {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 20px 25px;
+    background: #fff;
+    border: 2px solid $colorOrange;
+    border-radius: 0px 0px 5px 5px;
+    color: #333;
+    border-top: none;
+    display: none;
+
+    @media(max-width: $md3 + px) {
+        padding: 20px;
+        padding-top: 15px;
+        font-size: 11px;
+    }
+}

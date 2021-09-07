@@ -1,0 +1,120 @@
+.benefits {
+    background: url(../img/benefits_bg.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 90px 0;
+
+    @media(max-width: $md3 + px) {
+        padding: 50px 0;
+    }
+
+    &-btn {
+        max-width: 340px;
+        margin: 40px auto 0;
+
+        @media(max-width: $md3 + px) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.benefits__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+
+    @media(max-width: $md3 + px) {
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    @media(max-width: $md5 + px) {
+        display: block;
+    }
+}
+
+.benefits__item {
+    max-width: 360px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 45px rgba(37, 37, 37, 0.03);
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+
+    @media(max-width: $md4 + px) {
+        padding: 25px;
+    }
+
+    @media(max-width: $md5 + px) {
+        margin: 0 auto;
+    }
+}
+
+.benefits__item:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 30px;
+    border-bottom: 1px dotted $colorOrange;
+    position: absolute;
+    top: 50%;
+    right: -28px;
+    z-index: -1;
+
+    @media(max-width: $md3 + px) {
+        display: none;
+    }
+}
+
+.benefits__item:nth-child(3):after {
+    bottom: -13px;
+    top: auto;
+    transform: rotate(90deg);
+    right: auto;
+    left: 50%;
+}
+
+.benefits__item:nth-child(4):after {
+    right: auto;
+    left: 50%;
+    transform: rotate(90deg);
+    top: -17px;
+}
+
+.benefits__item:nth-child(5):after {
+    right: auto;
+    left: -30px;
+}
+
+.benefits__item:nth-child(6):after {
+    right: auto;
+    left: -30px;
+}
+
+.benefits__item-title {
+    font-size: 15px;
+    line-height: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 18px;
+    position: relative;
+    padding-left: 35px;
+
+    &::before {
+        content: url(../img/icon/icon-check.svg);
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.benefits__item-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
