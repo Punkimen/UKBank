@@ -29,6 +29,12 @@
         @@include('components/_footer.html')
     </div>
     @@include('components/_scripts.html')
+    <script>
+        $('.credits-head__item').on('click', function () {
+            let index = $(this).index();
+            $('.info__slider').slick('slickGoTo', index)
+        })
+    </script>
 </body>
 
 </html>

@@ -123,18 +123,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="info__slider-item">
-                        <div class="info__slider-bg">
-                            <div class="container">
-                                <div class="slider__content">
-                                    <div class="info__slider-title">
-                                        Наш принцип- довіра і взаємоповага інтересів клієнтів!
-                                    </div>
-                                    <div class="info__slider-descr">ПОЗИЧИМО ТОБІ ВСЕ ЩО ТИ ХОЧЕШ</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1020,6 +1008,12 @@
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
 <script src="js/script.js" defer></script>
+    <script>
+        $('.credits-head__item').on('click', function () {
+            let index = $(this).index();
+            $('.info__slider').slick('slickGoTo', index)
+        })
+    </script>
 </body>
 
 </html>

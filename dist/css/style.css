@@ -214,9 +214,9 @@ select {
  */
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -225,9 +225,9 @@ button,
  */
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -237,9 +237,9 @@ button::-moz-focus-inner,
  */
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -294,8 +294,8 @@ textarea {
  * 2. Remove the padding in IE 10.
  */
 
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -306,8 +306,8 @@ textarea {
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -316,7 +316,7 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -327,7 +327,7 @@ textarea {
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -412,7 +412,7 @@ a {
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -459,11 +459,11 @@ li {
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
-  transition: all .2s;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -ms-transition: all .2s;
-  -o-transition: all .2s;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
 
 .btn:hover {
@@ -584,7 +584,7 @@ h3.section-title {
 .pagination__item {
   font-size: 12px;
   line-height: 16px;
-  transition: all .2s;
+  transition: all 0.2s;
   color: #a4a4a4;
   margin: 0 10px;
 }
@@ -604,7 +604,7 @@ h3.section-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all .2s;
+  transition: all 0.2s;
   border-radius: 2px;
 }
 
@@ -614,7 +614,7 @@ h3.section-title {
 
 .pagination__link--arrow:hover svg {
   fill: #fff;
-  transition: all .2;
+  transition: all 0.2;
 }
 
 .pagination__link--arrow svg {
@@ -627,7 +627,7 @@ h3.section-title {
 }
 
 input {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -636,7 +636,7 @@ input {
   width: 100%;
   border: 1px solid #EAECF0;
   border-radius: 5px;
-  transition: all .2s;
+  transition: all 0.2s;
   outline: none;
 }
 
@@ -718,7 +718,7 @@ label.error {
 }
 
 .control .control_indicator:after {
-  content: '';
+  content: "";
   display: none;
   position: absolute;
   top: 50%;
@@ -756,7 +756,7 @@ label.error {
 
 select {
   cursor: pointer;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -765,7 +765,7 @@ select {
   width: 100%;
   border: 1px solid #EAECF0;
   border-radius: 5px;
-  transition: all .2s;
+  transition: all 0.2s;
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -898,11 +898,11 @@ select:focus {
 }
 
 .header-link {
-  transition: all .2s;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -ms-transition: all .2s;
-  -o-transition: all .2s;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
 
 .header-link:hover {
@@ -920,11 +920,11 @@ select:focus {
 
 .header__lang {
   color: #A1A1A1;
-  transition: all .2s;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -ms-transition: all .2s;
-  -o-transition: all .2s;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
 
 .header__lang.active {
@@ -1037,7 +1037,7 @@ select:focus {
 
 .burger__icon span {
   position: absolute;
-  transition: all .3s ease 0s;
+  transition: all 0.3s ease 0s;
   top: calc(50% - 1px);
   left: 0;
   height: 2px;
@@ -1130,7 +1130,7 @@ select:focus {
   position: relative;
   max-width: 450px;
   width: 100%;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   padding: 120px 0 100px;
   height: 720px;
   color: #fff;
@@ -1167,7 +1167,7 @@ select:focus {
 }
 
 .calc__container:before {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
   background: #fff;
@@ -1225,7 +1225,7 @@ select:focus {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   color: #333;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   max-width: 630px;
   width: 100%;
   padding-bottom: 50px;
@@ -1252,7 +1252,7 @@ select:focus {
   box-shadow: 19px -19px 10px -21px rgba(0, 0, 0, 0.5) inset;
   cursor: pointer;
   color: #A4A4A4;
-  transition: all .2s;
+  transition: all 0.2s;
   outline: none;
 }
 
@@ -1564,22 +1564,22 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .info__slider .slick-dots li button:before {
-  font-family: 'slick';
+  font-family: "slick";
   font-size: 6px;
   line-height: 20px;
   position: absolute;
   top: 0;
   left: 0;
-  content: '•';
+  content: "•";
   text-align: center;
-  opacity: .25;
+  opacity: 0.25;
   color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .info__slider slick-dots li.slick-active button:before {
-  opacity: .75;
+  opacity: 0.75;
   color: black;
 }
 
@@ -1644,18 +1644,18 @@ html .ui-button.ui-state-disabled:hover {
   display: inline-flex;
   align-items: center;
   color: #0B356B;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .online__content-link::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 15px;
   left: 0;
   height: 1px;
   width: 100%;
   background: #0B356B;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .online__content-link:hover {
@@ -1676,11 +1676,11 @@ html .ui-button.ui-state-disabled:hover {
   margin-left: 8px;
   height: 10px;
   fill: #0B356B;
-  transition: all .2s;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -ms-transition: all .2s;
-  -o-transition: all .2s;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
 
 .statistic {
@@ -1852,7 +1852,7 @@ html .ui-button.ui-state-disabled:hover {
 .benefits__item-title {
   font-size: 15px;
   line-height: 20px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-size: 15px;
   line-height: 20px;
@@ -1885,7 +1885,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .repay::after {
-  content: ' ';
+  content: " ";
   display: block;
   position: absolute;
   z-index: 1;
@@ -1939,7 +1939,7 @@ html .ui-button.ui-state-disabled:hover {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   padding-top: 30px;
   padding-bottom: 20px;
   color: #333;
@@ -2020,7 +2020,7 @@ html .ui-button.ui-state-disabled:hover {
   border: 1px solid #0B356B;
   box-sizing: border-box;
   border-radius: 5px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .accordion__title a:hover {
@@ -2045,7 +2045,7 @@ html .ui-button.ui-state-disabled:hover {
 .accordion__title a svg {
   position: absolute;
   right: 25px;
-  transition: all .3s;
+  transition: all 0.3s;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -2274,7 +2274,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .about-content__list-elem::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -2464,7 +2464,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .news .news-info__item::before {
-  content: '-';
+  content: "-";
   position: absolute;
   left: 0;
   top: 50%;
@@ -2483,7 +2483,7 @@ html .ui-button.ui-state-disabled:hover {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px dotted #A4A4A4;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .news__info-link:hover {
@@ -2513,7 +2513,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .news-block {
-  transition: all ease .2s;
+  transition: all ease 0.2s;
 }
 
 .news-block:hover {
@@ -2569,7 +2569,7 @@ html .ui-button.ui-state-disabled:hover {
 
 .answer {
   padding: 50px 0 120px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .answer .tabs__content-item:not(:last-child) {
@@ -2658,7 +2658,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .contacts {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   padding: 50px 0 50px;
 }
 
@@ -2816,7 +2816,7 @@ html .ui-button.ui-state-disabled:hover {
 .information,
 .credit__passport {
   padding: 50px 0 90px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .table__information,
@@ -2890,7 +2890,7 @@ html .ui-button.ui-state-disabled:hover {
 .confirm__content {
   max-width: 750px;
   margin: 0 auto;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .confirm__content-title {
@@ -2918,7 +2918,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .section-error {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   padding: 80px 0;
 }
 
@@ -2978,7 +2978,7 @@ html .ui-button.ui-state-disabled:hover {
 
 .registration__phone {
   padding: 50px 0 150px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
 }
 
@@ -3010,7 +3010,7 @@ html .ui-button.ui-state-disabled:hover {
 
 .registration__phone-inp span,
 .registration__phone-code span {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .registration__phone-inp input,
@@ -3095,7 +3095,7 @@ html .ui-button.ui-state-disabled:hover {
   font-size: 14px;
   line-height: 16px;
   border-bottom: 1px dotted #A4A4A4;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .register__enter:hover {
@@ -3573,7 +3573,7 @@ html .ui-button.ui-state-disabled:hover {
   font-size: 16px;
   line-height: 20px;
   position: relative;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .cabinet-aside__item:hover {
@@ -3660,7 +3660,7 @@ html .ui-button.ui-state-disabled:hover {
   width: 20px;
   height: 20px;
   fill: #D1D1D3;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .cabinet-new__title svg:hover {
@@ -4089,7 +4089,7 @@ html .ui-button.ui-state-disabled:hover {
 
 .bank__item-bank {
   min-height: 43px;
-  width: calc(100% / 3);
+  width: 33.3333333333%;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -4158,7 +4158,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .photo__wrapper-img--bg::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -4290,7 +4290,7 @@ html .ui-button.ui-state-disabled:hover {
   font-size: 14px;
   line-height: 20px;
   color: #a4a4a4;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .photo-do__tab:hover {
@@ -4571,7 +4571,7 @@ html .ui-button.ui-state-disabled:hover {
 }
 
 .loading-request__percent svg circle:last-child {
-  stroke-dashoffset: calc(470 - (470 * 25) / 100);
+  stroke-dashoffset: 352.5;
   stroke: #FFCF5C;
 }
 
@@ -4828,7 +4828,7 @@ html .ui-button.ui-state-disabled:hover {
   background-position: center;
   padding: 50px 0 20px;
   color: #fff;
-  font-family: 'Ubhuntu', sans-serif;
+  font-family: "Ubhuntu", sans-serif;
 }
 
 .footer__wrapper-up {
@@ -4942,7 +4942,7 @@ html .ui-button.ui-state-disabled:hover {
   max-width: 532px;
   width: 100%;
   text-align: center;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   margin: 0 auto 20px;
   padding: 30px;
 }
@@ -6511,7 +6511,7 @@ html .ui-button.ui-state-disabled:hover {
   }
 
   .bank__item-bank {
-    width: calc(100% / 2);
+    width: 50%;
   }
 
   .repayment-table__row {

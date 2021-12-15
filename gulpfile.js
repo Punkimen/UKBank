@@ -9,23 +9,28 @@ let path = {
         css: project_folder + '/css/',
         js: project_folder + '/js/',
         img: project_folder + '/img/',
-        fonts: project_folder + '/fonts/'
+        fonts: project_folder + '/fonts/',
+        video: project_folder + '/video/',
+        php: project_folder + '/',
     },
     src: {
         html: [source_folder + '/html/**/*.html', '!' + source_folder + '/html/**/_*.html'],
         // css: source_folder + '/scss/style.scss',
-        css: [source_folder + '/scss/**/*.scss', '!' + source_folder + '/scss/_*.scss'],
+        css: [source_folder + '/scss/**/*.scss', '!' + source_folder + '/scss/**/_*.scss'],
         // js: source_folder + '/js/script.js',
         js: [source_folder + '/js/*.js', '!' + source_folder + '/js/_*.js'],
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-        fonts: source_folder + '/fonts/*.ttf'
+        fonts: source_folder + '/fonts/*.ttf',
+        video: source_folder + '/video/*.mp4',
+        php: source_folder + '/mail/**/*.php',
     },
     watch: {
         html: source_folder + '/**/*.html',
         css: source_folder + '/scss/**/*.scss',
         js: source_folder + '/js/**/*.js',
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-        svg: source_folder + '/iconsprite/*.svg'
+        svg: source_folder + '/iconsprite/*.svg',
+        php: source_folder + '/mail/**/*.php',
     },
     clean: './' + project_folder + '/'
 };
@@ -34,7 +39,7 @@ let { src, dest } = require('gulp'),
     browsersync = require('browser-sync').create(),
     fileinclude = require('gulp-file-include'),
     del = require('del'),
-    scss = require('gulp-sass'),
+    scss = require('gulp-sass')(require('sass')),
     autoprefix = require('gulp-autoprefixer'),
     group_media = require('gulp-group-css-media-queries'),
     clean_css = require('gulp-clean-css'),
@@ -60,6 +65,7 @@ function html() {
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream())
 }
+
 function css() {
     return src(path.src.css)
         .pipe(scss({
@@ -130,6 +136,16 @@ function fonts() {
         .pipe(ttf2woff2())
         .pipe(dest(path.build.fonts))
 }
+function video() {
+    return src(path.src.video)
+        .pipe(dest(path.build.video))
+}
+function php() {
+    return src(path.src.php)
+        .pipe(dest(path.build.php))
+        .pipe(browsersync.stream())
+}
+
 function fontsStyle(params) {
 
     let file_content = fs.readFileSync(source_folder + '/scss/_fonts.scss');
@@ -158,17 +174,21 @@ function watchFiles() {
     gulp.watch([path.watch.js], js)
     gulp.watch([path.watch.img], images)
     gulp.watch([path.watch.svg], svg)
+    gulp.watch([path.watch.php], php)
+
 }
 
 function clean() {
     return del(path.clean)
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, svg), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, svg, video, php), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
+exports.video = video;
+exports.php = php; php
 exports.svg = svg;
 exports.images = images;
 exports.js = js;
