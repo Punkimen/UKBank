@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/control.min.css">
+    <style>
+        input:disabled {
+            border-color: #a4a4a4;
+        }
+
+        input:disabled::hover {
+            border-color: #a4a4a4;
+        }
+
+        .control.disabled .control_indicator {
+            /* background: #000; */
+            border-color: #a4a4a4;
+        }
+
+        .control.disabled:hover input~.control_indicator {
+            border-color: #a4a4a4;
+        }
+    </style>
 </head>
 
 <body id="lending">
@@ -366,14 +384,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="credits__calc-form__checkbox"> <label
-                                class="control control-group__item controlcheckbox">
+                        <div class="credits__calc-form__checkbox">
+                            <label class="control control-group__item controlcheckbox disabled">
                                 <div class="contol-group__text">Я согласен на <a href="#popup__sent"
-                                        class="blue popup-modal">условия</a>
+                                        class="blue popup-modal uncheck">условия</a>
                                     оформления онлайн заявки</div>
-                                <input type="checkbox" name="checkbox" checked />
+                                <input type="checkbox" name="checkbox" disabled />
                                 <div class="control_indicator"></div>
-                            </label></div>
+                            </label>
+                        </div>
                         <div class="credits__calc-button">
                             <button class="credits__calc-btn btn">
                                 Отправить заявку
@@ -920,9 +939,9 @@
                 <div class="footer__right-support">
                     <div class="support__title">Служба поддержки</div>
                     <div class="support__phone">
-                        <a href="tel:0800210804">0 (800) 210 804</a>
-                        <a href="#">+38 (044) 205-33-76</a>
-                        <a href="#">+38 (044) 364-35-26</a>
+                        <a class="phone-link" href="tel:0800210804">0 (800) 210 804</a>
+                        <a class="phone-link" href="#">+38 (044) 205-33-76</a>
+                        <a class="phone-link" href="#">+38 (044) 364-35-26</a>
                         <a class="email-link" href="office@buc.com.ua">office@buc.com.ua</a>
                     </div>
                 </div>
@@ -938,25 +957,25 @@
                 </div>
                 <div class="footer__social">
                     <div class="footer__social-text">Оценiте нас!</div>
-                    <div class="footer__social-qr">
-                        <img src="img/QR.jpg" alt="">
-                    </div>
+                    <a href="#" class="footer__social-link--rate btn">
+                        Опитування
+                    </a>
                 </div>
             </div>
             <div class="footer__wrapper-down">
-                <div class="footer__wrapper-left">
-                    <div class="footer__copy">© 2020 “Easy Cash”. Все права защищены</div>
-                </div>
                 <div class="footer__wrapper-right">
                     <div class="footer__social">
                         <a href="" class="footer__social-link">
                             <img src="img/icon/fb.jpg" alt="">
                         </a>
-                        <a href="" class="footer__social-link">
+                        <a href="" class="footer__social-link ">
                             <img src="img/icon/telegram.jpg" alt="">
                         </a>
                     </div>
 
+                </div>
+                <div class="footer__wrapper-left">
+                    <div class="footer__copy">© 2020 “Easy Cash”. Все права защищены</div>
                 </div>
             </div>
         </div>
@@ -1114,7 +1133,15 @@
             let index = $(this).index();
             $('.info__slider').slick('slickGoTo', index)
         })
+
+        // uncheck checkboxes
+
+        $('.uncheck').on('click', function () {
+            $(this).parents('.control').removeClass('disabled')
+            $(this).parents('.control').children('input').prop('disabled', false)
+        })
     </script>
+
 </body>
 
 </html>

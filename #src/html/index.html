@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/control.min.css">
+    <style>
+        input:disabled {
+            border-color: #a4a4a4;
+        }
+
+        input:disabled::hover {
+            border-color: #a4a4a4;
+        }
+
+        .control.disabled .control_indicator {
+            /* background: #000; */
+            border-color: #a4a4a4;
+        }
+
+        .control.disabled:hover input~.control_indicator {
+            border-color: #a4a4a4;
+        }
+    </style>
 </head>
 
 <body id="lending">
@@ -170,7 +188,15 @@
             let index = $(this).index();
             $('.info__slider').slick('slickGoTo', index)
         })
+
+        // uncheck checkboxes
+
+        $('.uncheck').on('click', function () {
+            $(this).parents('.control').removeClass('disabled')
+            $(this).parents('.control').children('input').prop('disabled', false)
+        })
     </script>
+
 </body>
 
 </html>

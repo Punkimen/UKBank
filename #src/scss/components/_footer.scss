@@ -28,10 +28,9 @@
 }
 
 .footer__wrapper-down {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    display: block;
 
+    .footer__wrapper-right {}
 }
 
 .footer__right-support {
@@ -44,8 +43,8 @@
 }
 
 .footer__wrapper-left {
-    width: 60%;
-    display: flex;
+    width: 100%;
+    text-align: center;
 
     @media(max-width:$md4 + px) {
         display: block;
@@ -90,11 +89,6 @@
         margin-bottom: 20px;
     }
 
-    .footer__copy {
-        width: 100%;
-        text-align: center;
-    }
-
     .footer__right-time {
         position: absolute;
         width: 100%;
@@ -127,7 +121,9 @@
 .footer__wrapper-right {
     display: flex;
     align-items: flex-start;
+    justify-content: flex-end;
     font-size: 14px;
+    margin-bottom: 15px;
 
     @media(max-width:$md3 + px) {
         display: block;
@@ -163,12 +159,35 @@
 
     a {
         display: block;
+        position: relative;
+        padding-left: 25px;
+        display: block;
         color: #fff;
         white-space: nowrap;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &.phone-link {
+            &::before {
+                content: url(../img/phone-callWhite.svg);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
 
         &.email-link {
             font-size: 10px;
             line-height: 14px;
+
+            &::before {
+                content: url(../img/emailWhite.svg);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
     }
 }
@@ -257,6 +276,10 @@
     margin-bottom: 10px;
 }
 
+.footer__copy {
+    font-size: 10px;
+}
+
 @media(max-width:$md5 + px) {
     .footer__left-links a {
         font-size: 12px;
@@ -307,14 +330,13 @@
     }
 }
 
-.footer__social-qr {
-    width: 50px;
-    height: 50px;
+.footer__social-link--rate {
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+    background: $colorBlue;
 
-    img {
-        display: block;
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
+    &:hover {
+        background: #5dbaf8;
     }
 }
