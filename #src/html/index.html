@@ -29,6 +29,48 @@
         .control.disabled:hover input~.control_indicator {
             border-color: #a4a4a4;
         }
+
+        .footer__wrapper-up {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer__wrappe-col {
+            width: 25%;
+        }
+
+        .footer__wrappe-col:not(:last-child) {
+            padding-right: 15px;
+        }
+
+        .footer__wrappe-col:last-child {
+            text-align: right;
+        }
+
+        @media(max-width: 768px) {
+            .footer__wrappe-col {
+                width: 50%;
+            }
+
+            .footer__wrappe-col:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            .footer__wrappe-col:last-child {
+                text-align: left;
+            }
+        }
+
+        @media(max-width: 568px) {
+            .footer__wrappe-col {
+                width: 100%;
+            }
+
+            .footer__wrappe-col:not(:last-child) {
+                padding-right: 0px;
+            }
+        }
     </style>
 </head>
 

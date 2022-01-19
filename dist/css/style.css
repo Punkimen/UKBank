@@ -4848,23 +4848,8 @@ html .ui-button.ui-state-disabled:hover {
   color: #fff;
 }
 
-.footer__wrapper-up {
-  margin-bottom: 30px;
-}
-
-.footer__wrapper-up {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
-}
-
 .footer__wrapper-down {
   display: block;
-}
-
-.footer__right-support {
-  margin-left: 10px;
-  margin-right: 15px;
 }
 
 .footer__wrapper-left {
@@ -5619,14 +5604,6 @@ html .ui-button.ui-state-disabled:hover {
     margin-bottom: 5px;
   }
 
-  .footer__wrapper-up {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .footer__right-support {
-    margin: 0 0 20px 0;
-  }
-
   .footer__wrapper-right {
     display: block;
   }
@@ -5962,10 +5939,6 @@ html .ui-button.ui-state-disabled:hover {
 
   .schedule-table__row {
     padding: 14px 0;
-  }
-
-  .footer__wrapper-up {
-    display: block;
   }
 
   .footer__wrapper-left {
