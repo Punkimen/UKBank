@@ -1146,7 +1146,7 @@ select:focus {
 }
 
 .slider__content {
-  margin-left: 471px;
+  margin-left: 0;
   position: relative;
   max-width: 450px;
   width: 100%;
@@ -1171,34 +1171,17 @@ select:focus {
   line-height: 32px;
 }
 
-.calc__container {
-  max-width: 490px;
-  padding: 0 15px;
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+.calc {
+  padding: 100px 0 0px;
 }
 
-.calc__container:before {
-  content: "";
-  position: absolute;
-  display: none;
-  background: #fff;
-  width: 110%;
-  height: 100%;
-  z-index: -1;
-  left: -20px;
+.calc__container {
+  padding: 0 15px;
+  width: 100%;
 }
 
 .credits__calc {
   max-width: 460px;
-  margin-left: auto;
 }
 
 .credits__calc-button {
@@ -5218,10 +5201,6 @@ html .ui-button.ui-state-disabled:hover {
     bottom: 0;
   }
 
-  .calc__container:before {
-    display: block;
-  }
-
   .calc__container {
     max-width: 100%;
     background: #fff;
@@ -5236,7 +5215,6 @@ html .ui-button.ui-state-disabled:hover {
 
   .credits__calc {
     max-width: 100%;
-    padding-top: 30px;
     margin: 0px auto 0;
   }
 
@@ -5389,12 +5367,12 @@ html .ui-button.ui-state-disabled:hover {
     font-size: 36px;
   }
 
-  .online {
-    padding: 50px 0;
+  .calc {
+    padding: 50px 0 0;
   }
 
-  .online-container {
-    padding: 0;
+  .online {
+    padding: 50px 0;
   }
 
   .online__inner {
@@ -5409,7 +5387,6 @@ html .ui-button.ui-state-disabled:hover {
   .online__content {
     max-height: 350px;
     max-width: 100%;
-    padding: 0 15px;
   }
 
   .how {
@@ -6064,8 +6041,8 @@ html .ui-button.ui-state-disabled:hover {
     line-height: 18px;
   }
 
-  .calc__container:before {
-    display: none;
+  .calc {
+    padding: 0px 0 0;
   }
 
   .calc__container {
@@ -6533,6 +6510,15 @@ html .ui-button.ui-state-disabled:hover {
 
   .info__label {
     font-size: 12px;
+  }
+
+  .online__images img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%;
+    height: 180px;
   }
 
   .online__content-title {
