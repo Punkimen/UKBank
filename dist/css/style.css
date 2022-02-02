@@ -1172,7 +1172,18 @@ select:focus {
 }
 
 .calc {
-  padding: 100px 0 0px;
+  background: #a4a4a4;
+  padding: 50px 0 50px;
+  position: relative;
+}
+
+.calc::before {
+  content: url(../img/slider-line-bg.png);
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .calc__container {
@@ -1582,6 +1593,48 @@ html .ui-button.ui-state-disabled:hover {
 .info__slider slick-dots li.slick-active button:before {
   opacity: 0.75;
   color: black;
+}
+
+.credits__calc {
+  margin-right: 50px;
+}
+
+.calc .container {
+  position: relative;
+  z-index: 2;
+}
+
+.calc__wrapper {
+  display: flex;
+}
+
+.calc__content {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+.calc__content-title {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1.2em;
+  margin-bottom: 30%;
+}
+
+.calc__content-list {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2em;
+}
+
+.calc__content-label {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2em;
+  color: #0064AC;
+  text-transform: uppercase;
 }
 
 .online {
@@ -5213,11 +5266,6 @@ html .ui-button.ui-state-disabled:hover {
     -o-transform: translateY(0);
   }
 
-  .credits__calc {
-    max-width: 100%;
-    margin: 0px auto 0;
-  }
-
   .credits__calc-wrap {
     margin: 0 auto;
   }
@@ -5367,8 +5415,20 @@ html .ui-button.ui-state-disabled:hover {
     font-size: 36px;
   }
 
-  .calc {
-    padding: 50px 0 0;
+  .calc__wrapper {
+    align-items: flex-start;
+  }
+
+  .calc__content-title {
+    font-size: 30px;
+  }
+
+  .calc__content-list {
+    font-size: 20px;
+  }
+
+  .calc__content-label {
+    font-size: 20px;
   }
 
   .online {
@@ -5645,6 +5705,33 @@ html .ui-button.ui-state-disabled:hover {
 
   .svg-cabinet {
     display: block;
+  }
+
+  .credits {
+    display: none;
+  }
+
+  .credits__calc-wrap {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .credits__calc-left {
+    max-width: 100%;
+  }
+
+  .credits__calc {
+    margin-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .calc__wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .calc__content-title {
+    margin-bottom: 40px;
   }
 
   .online__content-link {
@@ -6060,10 +6147,6 @@ html .ui-button.ui-state-disabled:hover {
 
   .wrap__content {
     padding: 25px;
-  }
-
-  .credits__calc-left {
-    max-width: 100%;
   }
 
   .range__up {
