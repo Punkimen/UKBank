@@ -13,17 +13,17 @@ $(document).ready(function () {
     addActive($('.tabs__name-item'), 'active');
 
     const equalHeightContent = (element) => {
-        let imgHeidht = $('.online__images').height();
+        let imgHeidht = $('.online__content').height();
         element.height(imgHeidht);
     }
-    equalHeightContent($('.online__content'))
+    equalHeightContent($('.online__images'))
 
     $(window).resize(function () {
         let windowWidth = $(window).width();
         contentHeigh();
         if (windowWidth > 992) {
         }
-        equalHeightContent($('.online__content'))
+        equalHeightContent($('.online__images'))
     })
     $('.accordion__title').on('click', function () {
         $(this).toggleClass('active').next().slideToggle();

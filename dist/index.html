@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/control.min.css">
     <style>
+        button:disabled {
+            border-color: #a4a4a4;
+            background-color: #a4a4a4;
+            color: #fff;
+            pointer-events: none;
+        }
+
         input:disabled {
             border-color: #a4a4a4;
         }
@@ -156,32 +163,34 @@
 </header>
         <main class="main">
             <section class="credits">
-    <div class="container credits-container">
-        <div class="credits__inner">
-            <div class="credits__info">
-                <div class="info__slider">
-                    <div class="info__slider-item">
-                        <div class="info__slider-bg">
-                            <div class="container">
-                                <div class="slider__content">
-                                    <div class="info__slider-title">
-                                        Наш принцип- довіра і взаємоповага інтересів клієнтів!
-                                    </div>
-                                    <div class="info__slider-descr">ПОЗИЧИМО ТОБІ ВСЕ ЩО ТИ ХОЧЕШ</div>
+    <div class="credits__inner">
+        <div class="credits__info">
+            <div class="info__slider">
+                <div class="info__slider-item" style="background: #A4A4A4 url(../img/slider-bg.jpg);">
+                    <div class="info__slider-bg">
+                        <div class="container">
+
+                            <div class="slider__content">
+                                <div class="info__slider-title">
+                                    Наш принцип- довіра і взаємоповага інтересів клієнтів!
                                 </div>
+                                <div class="info__slider-descr">ПОЗИЧИМО ТОБІ ВСЕ ЩО ТИ ХОЧЕШ</div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="info__slider-item">
-                        <div class="info__slider-bg">
-                            <div class="container">
-                                <div class="slider__content">
-                                    <div class="info__slider-title">
-                                        Наш принцип- довіра і взаємоповага інтересів клієнтів!
-                                    </div>
-                                    <div class="info__slider-descr">ПОЗИЧИМО ТОБІ ВСЕ ЩО ТИ ХОЧЕШ</div>
+                </div>
+                <div class="info__slider-item" style="background: #A4A4A4 url(../img/slider-bg.jpg);">
+                    <div class="info__slider-bg">
+                        <div class="container">
+
+                            <div class="slider__content">
+                                <div class="info__slider-title">
+                                    Наш принцип- довіра і взаємоповага інтересів клієнтів!
                                 </div>
+                                <div class="info__slider-descr">ПОЗИЧИМО ТОБІ ВСЕ ЩО ТИ ХОЧЕШ</div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -435,12 +444,12 @@
                                 <div class="contol-group__text">Я согласен на <a href="#popup__sent"
                                         class="blue popup-modal uncheck">условия</a>
                                     оформления онлайн заявки</div>
-                                <input type="checkbox" name="checkbox" disabled />
+                                <input id="checkbox-aply" type="checkbox" name="checkbox" disabled />
                                 <div class="control_indicator"></div>
                             </label>
                         </div>
                         <div class="credits__calc-button">
-                            <button class="credits__calc-btn btn">
+                            <button id="sendBtn" class="credits__calc-btn btn" disabled>
                                 Отправить заявку
                             </button>
                         </div>
@@ -473,25 +482,6 @@
                     <span>Еpeer - це інноваційна платформа, яка використовує штучний інтелект для зв’язку інвесторів та
                         позичальників на веб-сайті та мобільному додатку.
                     </span>
-                    <span>Ми вирішуємо проблему фінансової ліквідності, що означає відутність можливості швидко і
-                        безпечно інвестувати і позичати невеликі суми грошей.
-                    </span>
-                    <span> Наша проривна система штучного інтелекту дозволяє встановити кредитний ліміт для наших
-                        позичальників, який буде збільшуватися з подальшими успішними операціями.</span>
-                    <span>Ми вирішуємо проблему фінансової ліквідності, що означає відутність можливості швидко і
-                        безпечно інвестувати і позичати невеликі суми грошей.
-                        Наша проривна система штучного інтелекту ...</span>
-                    <span>Еpeer - це інноваційна платформа, яка використовує штучний інтелект для зв’язку інвесторів та
-                        позичальників на веб-сайті та мобільному додатку.
-                    </span>
-                    <span>Ми вирішуємо проблему фінансової ліквідності, що означає відутність можливості швидко і
-                        безпечно інвестувати і позичати невеликі суми грошей.
-                    </span>
-                    <span> Наша проривна система штучного інтелекту дозволяє встановити кредитний ліміт для наших
-                        позичальників, який буде збільшуватися з подальшими успішними операціями.</span>
-                    <span>Ми вирішуємо проблему фінансової ліквідності, що означає відутність можливості швидко і
-                        безпечно інвестувати і позичати невеликі суми грошей.
-                        Наша проривна система штучного інтелекту ...</span>
                 </div>
                 <a href="" class="online__content-link">
                     <span>Читати далі</span>
@@ -1209,6 +1199,14 @@
         $('.uncheck').on('click', function () {
             $(this).parents('.control').removeClass('disabled')
             $(this).parents('.control').children('input').prop('disabled', false)
+        })
+
+        $('#checkbox-aply').on('change', function () {
+            if ($(this).prop("checked") === false) {
+                $('#sendBtn').prop('disabled', true)
+            } else {
+                $('#sendBtn').prop('disabled', false)
+            }
         })
     </script>
 
